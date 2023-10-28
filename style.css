@@ -1,0 +1,73 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+}
+
+html {
+  font-family: monospace;
+  direction: ltr;
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: var(--page-background-color);
+  color: var(--page-text-color);
+}
+
+/*................................................................................... all header styles............*/
+
+header {
+  height: 10%;
+  background-color: rgba(255, 105, 180, 0.25);
+}
+
+form {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  margin-inline: 0.75rem;
+}
+
+.hexadecimal {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.red {
+  accent-color: red;
+}
+
+.green {
+  accent-color: green;
+}
+
+.randomColorButton {
+  all: unset;
+  height: 1.75rem;
+  background-color: white;
+  padding-inline: 0.5rem;
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
+}
+
+.randomColorButton:active {
+  outline: 0.2rem solid black;
+}
+
+/*.............................................................................. all main styles ..............*/
+
+main {
+  height: 90%;
+  background-color: #ff69b4;
+}
