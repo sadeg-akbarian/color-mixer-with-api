@@ -2,9 +2,9 @@ const red = document.querySelector("#red");
 const green = document.querySelector("#green");
 const blue = document.querySelector("#blue");
 const randomColorButton = document.querySelector("#randomColorButton");
-let chosenRedColor = "255";
-let chosenGreenColor = "105";
-let chosenBlueColor = "180";
+let chosenRedColor = "";
+let chosenGreenColor = "";
+let chosenBlueColor = "";
 
 function mainBackground() {
   const main = document.querySelector("main");
@@ -82,7 +82,7 @@ blue.addEventListener("change", function (event) {
 
 // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-randomColorButton.addEventListener("click", function () {
+function fetchTheColor() {
   fetch("https://dummy-apis.netlify.app/api/color")
     .then((response) => {
       if (response.ok === true) {
@@ -95,4 +95,10 @@ randomColorButton.addEventListener("click", function () {
       chosenBlueColor = data.rgb.b;
       changeTheColor();
     });
-});
+}
+
+fetchTheColor();
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+randomColorButton.addEventListener("click", fetchTheColor);

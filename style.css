@@ -24,7 +24,6 @@ body {
 
 header {
   height: 10%;
-  background-color: rgba(255, 105, 180, 0.25);
 }
 
 form {
@@ -69,5 +68,4 @@ section {
 
 main {
   height: 90%;
-  background-color: #ff69b4;
 }
